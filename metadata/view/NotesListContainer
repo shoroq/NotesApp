@@ -1,0 +1,101 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NotesListContainer",
+        "designer|userAlias": "noteslistcontainer",
+        "designer|initialView": true,
+        "layout": "fit"
+    },
+    "designerId": "fc0a0138-4c70-491b-bed9-da04889ca978",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent();\r",
+                    "\r",
+                    "var newButton = {\r",
+                    "    xtype: \"button\",\r",
+                    "    text: 'New',\r",
+                    "    ui: 'action',\r",
+                    "    handler: this.onNewButtonTap,\r",
+                    "    scope: this\r",
+                    "};\r",
+                    "\r",
+                    "var topToolbar = {\r",
+                    "    xtype: \"toolbar\",\r",
+                    "    title: 'My Notes',\r",
+                    "    docked: \"top\",\r",
+                    "    items: [\r",
+                    "    { xtype: 'spacer' },\r",
+                    "    newButton\r",
+                    "    ]\r",
+                    "};\r",
+                    "\r",
+                    "var notesList = {\r",
+                    "    xtype: \"noteslist\",\r",
+                    "    store: Ext.getStore('Notes'),\r",
+                    "    listeners: {\r",
+                    "        disclose: { fn: this.onNotesListDisclose, scope: this }\r",
+                    "    }\r",
+                    "};\r",
+                    "\r",
+                    "this.add([topToolbar]);"
+                ]
+            },
+            "designerId": "bb4a4a68-6d76-4f10-bb73-e425cdf63970"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNewButtonTap",
+                "implHandler": [
+                    "console.log(\"newNoteCommand\");\r",
+                    "this.fireEvent(\"newNoteCommand\", this);"
+                ]
+            },
+            "designerId": "b928042b-9f96-49b1-81ff-b13b4b45ad9c"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNotesListDisclose",
+                "designer|params": [
+                    "list",
+                    "record",
+                    "target",
+                    "index",
+                    "evt",
+                    "options"
+                ],
+                "implHandler": [
+                    "console.log(\"editNoteCommand\");\r",
+                    "this.fireEvent('editNoteCommand', this, record);\r",
+                    ""
+                ]
+            },
+            "designerId": "fdc39b22-8a71-4bf6-a7c1-52d014268777"
+        }
+    ]
+}

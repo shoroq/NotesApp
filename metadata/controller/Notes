@@ -1,0 +1,87 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Notes"
+    },
+    "designerId": "33607d3e-be69-42d0-acbc-8cf1ae3daccd",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "notesListContainer",
+                "selector": "noteslistcontainer"
+            },
+            "designerId": "18bde2ee-8879-4d0d-9c87-edda81b684b4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onNewNoteCommand",
+                "designer|params": [
+                    "container"
+                ],
+                "implHandler": [
+                    ""
+                ],
+                "name": "newNoteCommand",
+                "designer|targetType": "NotesListContainer",
+                "designer|controlQuery": "notesListContainer"
+            },
+            "designerId": "2c7328de-6e69-4329-a349-49afc72133ca"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onEditNoteCommand",
+                "designer|params": [
+                    "container"
+                ],
+                "implHandler": [
+                    ""
+                ],
+                "name": "editNoteCommand",
+                "designer|targetType": "NotesListContainer",
+                "designer|controlQuery": "notesListContainer"
+            },
+            "designerId": "e12c3f09-68c7-4434-a7c8-2beb11d24de3"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "this.callParent(arguments);\r",
+                    "Ext.getStore('Notes').load();\r",
+                    "console.log(\"launch\");\r",
+                    ""
+                ]
+            },
+            "designerId": "aa3bc76c-21c5-4399-8727-c629484854a3"
+        }
+    ]
+}

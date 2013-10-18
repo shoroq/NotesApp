@@ -1,0 +1,98 @@
+{
+    "name": "NotesApp",
+    "settings": {
+        "sdkPath": "C:/Users/amiguel/AppData/Local/Android/android-sencha",
+        "urlPrefix": "http://localhost:8000",
+        "exportPath": ""
+    },
+    "xdsVersion": "2.2.3",
+    "xdsBuild": 1044,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000503,
+    "framework": "touch22",
+    "topInstanceFileMap": {
+        "c04c849b-a59d-4514-94e4-520543168a72": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "ea4737d7-6663-473d-ae3e-8ee7f7f5277d": {
+            "paths": [
+                "metadata/resource/packager",
+                "",
+                "packager.json"
+            ],
+            "className": "packager"
+        },
+        "fc0a0138-4c70-491b-bed9-da04889ca978": {
+            "paths": [
+                "metadata/view/NotesListContainer",
+                "app/view/override/NotesListContainer.js",
+                "app/view/NotesListContainer.js"
+            ],
+            "className": "NotesListContainer"
+        },
+        "33607d3e-be69-42d0-acbc-8cf1ae3daccd": {
+            "paths": [
+                "metadata/controller/Notes",
+                "app/controller/override/Notes.js",
+                "app/controller/Notes.js"
+            ],
+            "className": "Notes"
+        },
+        "b00b05fe-8e9e-4c5b-ae77-d75f8d2ccf0f": {
+            "paths": [
+                "metadata/view/NotesList",
+                "app/view/override/NotesList.js",
+                "app/view/NotesList.js"
+            ],
+            "className": "NotesList"
+        },
+        "166b502b-35e3-46f0-8e3b-62db83ca99b7": {
+            "paths": [
+                "metadata/resource/css"
+            ],
+            "className": "css"
+        },
+        "5b62b53a-26c6-4173-a8be-6d673ff4be3c": {
+            "paths": [
+                "metadata/store/Notes",
+                "app/store/override/Notes.js",
+                "app/store/Notes.js"
+            ],
+            "className": "Notes"
+        },
+        "15014c3f-408e-4c2b-8af4-a921643ef718": {
+            "paths": [
+                "metadata/model/Note",
+                "app/model/override/Note.js",
+                "app/model/Note.js"
+            ],
+            "className": "Note"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "fc0a0138-4c70-491b-bed9-da04889ca978",
+            "b00b05fe-8e9e-4c5b-ae77-d75f8d2ccf0f"
+        ],
+        "store": [
+            "5b62b53a-26c6-4173-a8be-6d673ff4be3c"
+        ],
+        "controller": [
+            "33607d3e-be69-42d0-acbc-8cf1ae3daccd"
+        ],
+        "model": [
+            "15014c3f-408e-4c2b-8af4-a921643ef718"
+        ],
+        "resource": [
+            "c04c849b-a59d-4514-94e4-520543168a72",
+            "ea4737d7-6663-473d-ae3e-8ee7f7f5277d",
+            "166b502b-35e3-46f0-8e3b-62db83ca99b7"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

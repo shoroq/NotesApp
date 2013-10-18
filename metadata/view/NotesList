@@ -1,0 +1,34 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "NotesList",
+        "designer|userAlias": "noteslist",
+        "emptyText": "</pre><div class=\"notes-list-empty-text\">No notes found.</div><pre>",
+        "loadingText": "Loading notes...",
+        "store": null,
+        "onItemDisclosure": true
+    },
+    "designerId": "b00b05fe-8e9e-4c5b-ae77-d75f8d2ccf0f",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "implHandler": [
+                    "</pre><div class=\"list-item-title\">{title}</div><div class=\"list-item-narrative\">{narrative}</div><pre>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "39fcb451-7010-49dd-a09e-0b249f139123"
+        }
+    ]
+}
