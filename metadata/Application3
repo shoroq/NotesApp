@@ -10,7 +10,8 @@
             "Note"
         ],
         "stores": [
-            "Notes"
+            "Notes",
+            "MyDirectStore"
         ],
         "views": [
             "NotesListContainer",
@@ -37,7 +38,7 @@
                     "    xtype: \"noteslistcontainer\"\r",
                     "};\r",
                     "\r",
-                    "\r",
+                    "Ext.Viewport.add(notesListContainer);\r",
                     "\r",
                     ""
                 ]

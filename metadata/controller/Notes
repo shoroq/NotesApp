@@ -76,7 +76,7 @@
                 "fn": "launch",
                 "implHandler": [
                     "this.callParent(arguments);\r",
-                    "Ext.getStore('Notes').load();\r",
+                    "Ext.getStore('localExampleStore').load();\r",
                     "console.log(\"launch\");\r",
                     ""
                 ]

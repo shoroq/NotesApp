@@ -23,7 +23,8 @@ Ext.application({
         'Note'
     ],
     stores: [
-        'Notes'
+        'Notes',
+        'MyDirectStore'
     ],
     views: [
         'NotesListContainer',

@@ -46,13 +46,13 @@ Ext.define('NotesApp.view.NotesListContainer', {
 
         var notesList = {
             xtype: "noteslist",
-            store: Ext.getStore('Notes'),
+            store: Ext.getStore('localExampleStore'),
             listeners: {
                 disclose: { fn: this.onNotesListDisclose, scope: this }
             }
         };
 
-        this.add([topToolbar]);
+        this.add([topToolbar, notesList]);
     },
 
     onNewButtonTap: function() {

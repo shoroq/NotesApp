@@ -39,7 +39,7 @@ Ext.define('NotesApp.controller.Notes', {
 
     launch: function() {
         this.callParent(arguments);
-        Ext.getStore('Notes').load();
+        Ext.getStore('localExampleStore').load();
         console.log("launch");
 
     }

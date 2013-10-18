@@ -45,13 +45,13 @@
                     "\r",
                     "var notesList = {\r",
                     "    xtype: \"noteslist\",\r",
-                    "    store: Ext.getStore('Notes'),\r",
+                    "    store: Ext.getStore('localExampleStore'),\r",
                     "    listeners: {\r",
                     "        disclose: { fn: this.onNotesListDisclose, scope: this }\r",
                     "    }\r",
                     "};\r",
                     "\r",
-                    "this.add([topToolbar]);"
+                    "this.add([topToolbar, notesList]);"
                 ]
             },
             "designerId": "bb4a4a68-6d76-4f10-bb73-e425cdf63970"
