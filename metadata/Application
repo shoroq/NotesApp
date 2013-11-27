@@ -18,7 +18,8 @@
         ],
         "views": [
             "NotesListContainer",
-            "NotesList"
+            "NotesList",
+            "NoteEditor"
         ]
     },
     "designerId": "application",
