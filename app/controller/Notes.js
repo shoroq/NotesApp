@@ -18,7 +18,8 @@ Ext.define('NotesApp.controller.Notes', {
 
     config: {
         refs: {
-            notesListContainer: 'noteslistcontainer'
+            notesListContainer: 'noteslistcontainer',
+            noteEditor: 'noteeditor'
         },
 
         control: {
@@ -30,7 +31,19 @@ Ext.define('NotesApp.controller.Notes', {
     },
 
     onNewNoteCommand: function(container) {
+            console.log("onNewNoteCommand");
 
+            var now = new Date();
+            var noteId = (now.getTime()).toString() + (this.getRandomInt(0, 100)).toString();
+
+            var newNote = Ext.create("NotesApp.model.Note", {
+                id: noteId,
+                dateCreated: now,
+                title: "",
+                narrative: ""
+            });
+
+            this.activateNoteEditor(newNote);
     },
 
     onEditNoteCommand: function(container) {
@@ -42,6 +55,17 @@ Ext.define('NotesApp.controller.Notes', {
         Ext.getStore('localExampleStore').load();
         console.log("launch");
 
+    },
+
+    getRandomInt: function(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    },
+
+    activateNoteEditor: function(record) {
+        var noteEditor = this.getNoteEditor();
+
+        noteEditor.setRecord(record); // load() is deprecated.
+        Ext.Viewport.animateActiveItem(noteEditor, { type: 'slide', direction: 'left' });
     }
 
 });
