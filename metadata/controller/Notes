@@ -104,7 +104,7 @@
             "codeClass": null,
             "userConfig": {
                 "autoCreate": true,
-                "ref": "noteEditor",
+                "ref": "noteEditore",
                 "selector": "noteeditor",
                 "xtype": "noteeditor"
             },
@@ -142,7 +142,7 @@
                 ],
                 "fn": "activateNoteEditor",
                 "implHandler": [
-                    "var noteEditor = this.getNoteEditor();\r",
+                    "var noteEditor = this.getNoteEditore();\r",
                     "\r",
                     "noteEditor.setRecord(record); // load() is deprecated.\r",
                     "Ext.Viewport.animateActiveItem(noteEditor, this.slideLeftTransition);"
