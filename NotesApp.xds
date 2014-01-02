@@ -17,15 +17,17 @@
             "viewportOrientation": "portrait"
         },
         "lastBuildSelection": {
-            "value": "webBuild",
-            "display": "Build web app"
+            "value": "androidSimulate",
+            "display": "Simulate on Android"
         },
         "spacesToIndent": 4,
         "lineEnding": "CRLF",
         "genTimestamps": false,
         "cacheBust": false,
         "buildShouldOverwriteIndex": true,
-        "generateArchitectVersion": true
+        "generateArchitectVersion": true,
+        "license": "gpl",
+        "customPath": ""
     },
     "xdsVersion": "3.0.0",
     "xdsBuild": 1337,

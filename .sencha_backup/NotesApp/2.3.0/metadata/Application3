@@ -1,0 +1,49 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Note"
+        ],
+        "stores": [
+            "Notes",
+            "MyDirectStore"
+        ],
+        "views": [
+            "NotesListContainer",
+            "NotesList"
+        ],
+        "controllers": [
+            "Notes"
+        ],
+        "name": "NotesApp"
+    },
+    "designerId": "application",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "var notesListContainer = {\r",
+                    "    xtype: \"noteslistcontainer\"\r",
+                    "};\r",
+                    "\r",
+                    "Ext.Viewport.add(notesListContainer);\r",
+                    "\r",
+                    ""
+                ]
+            },
+            "designerId": "2c8956b6-d608-4eca-aa3d-5dc63652711a"
+        }
+    ]
+}

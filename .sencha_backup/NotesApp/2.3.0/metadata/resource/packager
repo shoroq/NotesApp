@@ -1,0 +1,43 @@
+{
+    "type": "packagesetting",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "androidAPILevel": "19",
+        "applicationId": "com.mycompany.myAppID",
+        "applicationName": "NotesApp",
+        "certificatePassword": "",
+        "certificatePath": "",
+        "configuration": "Debug",
+        "designer|userClassName": "packager",
+        "deviceType": "Universal",
+        "icon": [
+            "{\"36\":\"resources/icons/preguntas_icon.png\",\"48\":\"resources/icons/Google-Chrome-icon.png\",\"72\":\"resources/icons/Icon~ipad.png\"}"
+        ],
+        "inputPath": "./",
+        "orientations": [
+            "portrait",
+            "landscapeLeft",
+            "landscapeRight",
+            "portraitUpsideDown"
+        ],
+        "outputPath": "../build/",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "platform": "Android",
+        "sdkPath": "C:/Program Files (x86)/Android/sdk",
+        "versionCode": "1",
+        "versionString": "1.0"
+    },
+    "designerId": "ea4737d7-6663-473d-ae3e-8ee7f7f5277d"
+}

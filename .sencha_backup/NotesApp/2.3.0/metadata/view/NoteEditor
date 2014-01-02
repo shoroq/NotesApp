@@ -1,0 +1,93 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "noteeditor",
+        "designer|userClassName": "NoteEditor",
+        "requires": [
+            "Ext.form.FieldSet"
+        ],
+        "scrollable": "vertical"
+    },
+    "designerId": "68438562-aac5-4ec3-a26c-17ec77a11d25",
+    "cn": [
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "initialize",
+                "implHandler": [
+                    "this.callParent(arguments);\r",
+                    "\r",
+                    "var backButton = {\r",
+                    "    xtype: \"button\",\r",
+                    "    ui: \"back\",\r",
+                    "    text: \"Home\"\r",
+                    "};\r",
+                    "\r",
+                    "var saveButton = {\r",
+                    "    xtype: \"button\",\r",
+                    "    ui: \"action\",\r",
+                    "    text: \"Save\"\r",
+                    "};\r",
+                    "\r",
+                    "var topToolbar = {\r",
+                    "    xtype: \"toolbar\",\r",
+                    "    docked: \"top\",\r",
+                    "    title: \"Edit Note\",\r",
+                    "    items: [\r",
+                    "        backButton,\r",
+                    "        { xtype: \"spacer\" },\r",
+                    "        saveButton\r",
+                    "    ]\r",
+                    "};\r",
+                    "\r",
+                    "var deleteButton = {\r",
+                    "    xtype: \"button\",\r",
+                    "    iconCls: \"trash\",\r",
+                    "    iconMask: true,\r",
+                    "    scope: this\r",
+                    "};\r",
+                    "\r",
+                    "var bottomToolbar = {\r",
+                    "    xtype: \"toolbar\",\r",
+                    "    docked: \"bottom\",\r",
+                    "    items: [\r",
+                    "        deleteButton\r",
+                    "    ]\r",
+                    "};\r",
+                    "\r",
+                    "var noteTitleEditor = {\r",
+                    "    xtype: 'textfield',\r",
+                    "    name: 'title',\r",
+                    "    label: 'Title',\r",
+                    "    required: true\r",
+                    "};\r",
+                    "\r",
+                    "var noteNarrativeEditor = {\r",
+                    "    xtype: 'textareafield',\r",
+                    "    name: 'narrative',\r",
+                    "    label: 'Narrative'\r",
+                    "};\r",
+                    "\r",
+                    "this.add([\r",
+                    "    topToolbar,\r",
+                    "    { xtype: \"fieldset\",\r",
+                    "     items: [noteTitleEditor, noteNarrativeEditor]\r",
+                    "    },\r",
+                    "    bottomToolbar\r",
+                    "]);"
+                ]
+            },
+            "designerId": "7664c9ba-0fd3-4ade-a7a9-61360efb1c14"
+        }
+    ]
+}

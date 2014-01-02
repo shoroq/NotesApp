@@ -1,0 +1,115 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Note"
+    },
+    "designerId": "15014c3f-408e-4c2b-8af4-a921643ef718",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Id",
+                "type": "int"
+            },
+            "designerId": "b0d20e36-57a9-4f6a-926f-ca68a5c0ac7f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "dateFormat": "c",
+                "name": "dateCreated",
+                "type": "date"
+            },
+            "designerId": "2f85124b-6549-4da7-9634-b266446b8664"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "tittle",
+                "type": "string"
+            },
+            "designerId": "6037f778-a2cd-4ec0-b26b-8b1bc44ccf14"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "narrative",
+                "type": "string"
+            },
+            "designerId": "0dcd206d-f8d8-4f56-bfb7-9425d168d563"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "idValidation",
+                "field": "id"
+            },
+            "designerId": "d4d5b89a-05a9-499d-8171-36b1c8925b2f"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "dateCreatedValidation",
+                "field": "dateCreated"
+            },
+            "designerId": "e216a026-e93e-4d13-a512-2fde2b3bf171"
+        },
+        {
+            "type": "presencevalidation",
+            "reference": {
+                "name": "validations",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|createAlias": "tittleValidation",
+                "designer|displayName": null,
+                "field": "tiitle",
+                "message": "Please enter a title for this note."
+            },
+            "designerId": "8b78a81d-de79-4b4a-84f4-67bd10829d3c",
+            "customConfigs": [
+                {
+                    "group": "(Custom Properties)",
+                    "name": "message",
+                    "type": "string"
+                }
+            ]
+        }
+    ]
+}

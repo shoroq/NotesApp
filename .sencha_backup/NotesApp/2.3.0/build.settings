@@ -1,0 +1,64 @@
+{
+    "webBuild": {
+        "environment": "testing",
+        "publishPath": "C:/Users/Toni/Documents/Projects/NotesApp/PublishTest"
+    },
+    "androidSimulate": {
+        "applicationName": "NotesApp",
+        "applicationId": "com.mycompany.myAppID",
+        "androidAPILevel": "19",
+        "versionString": "1",
+        "versionCode": "1",
+        "sdkPath": "C:/Program Files (x86)/Android/sdk",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "icon": {
+            "36": "resources/icons/preguntas_icon.png",
+            "48": "resources/icons/Google-Chrome-icon.png",
+            "72": "resources/icons/Icon~ipad.png"
+        },
+        "orientation": [
+            "portrait",
+            "portraitUpsideDown",
+            "landscapeLeft",
+            "landscapeRight"
+        ]
+    },
+    "androidBuild": {
+        "applicationName": "NotesApp",
+        "applicationId": "com.mycompany.myAppID",
+        "androidAPILevel": "19",
+        "versionString": "1.0",
+        "versionCode": "1",
+        "sdkPath": "C:/Program Files (x86)/Android/sdk",
+        "permissions": [
+            "INTERNET",
+            "ACCESS_NETWORK_STATE",
+            "CAMERA",
+            "VIBRATE",
+            "ACCESS_FINE_LOCATION",
+            "ACCESS_COARSE_LOCATION",
+            "CALL_PHONE"
+        ],
+        "icon": {
+            "36": "resources/icons/preguntas_icon.png",
+            "48": "resources/icons/Google-Chrome-icon.png",
+            "72": "resources/icons/Icon~ipad.png"
+        },
+        "orientation": [
+            "portrait",
+            "portraitUpsideDown",
+            "landscapeLeft",
+            "landscapeRight"
+        ],
+        "certificatePassword": "",
+        "certificatePath": ""
+    }
+}

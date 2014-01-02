@@ -6,14 +6,16 @@
     },
     "codeClass": null,
     "userConfig": {
-        "androidAPILevel": "8",
+        "androidAPILevel": "19",
         "applicationId": "com.mycompany.myAppID",
         "applicationName": "NotesApp",
+        "certificatePassword": "",
+        "certificatePath": "",
         "configuration": "Debug",
         "designer|userClassName": "packager",
         "deviceType": "Universal",
         "icon": [
-            "{\"57\":\"resources/icons/Icon.png\",\"72\":\"resources/icons/Icon~ipad.png\",\"114\":\"resources/icons/Icon@2x.png\",\"144\":\"resources/icons/Icon~ipad@2x.png\"}"
+            "{\"36\":\"resources/icons/preguntas_icon.png\",\"48\":\"resources/icons/Google-Chrome-icon.png\",\"72\":\"resources/icons/Icon~ipad.png\"}"
         ],
         "inputPath": "./",
         "orientations": [
@@ -33,8 +35,9 @@
             "CALL_PHONE"
         ],
         "platform": "AndroidEmulator",
+        "sdkPath": "C:/Program Files (x86)/Android/sdk",
         "versionCode": "1",
-        "versionString": "1.0"
+        "versionString": "1"
     },
     "designerId": "ea4737d7-6663-473d-ae3e-8ee7f7f5277d"
 }

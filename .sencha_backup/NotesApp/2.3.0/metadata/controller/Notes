@@ -1,0 +1,152 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Notes"
+    },
+    "designerId": "33607d3e-be69-42d0-acbc-8cf1ae3daccd",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "notesListContainer",
+                "selector": "noteslistcontainer"
+            },
+            "designerId": "18bde2ee-8879-4d0d-9c87-edda81b684b4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "notesListContainer",
+                "designer|params": [
+                    "container"
+                ],
+                "designer|targetType": "NotesListContainer",
+                "fn": "onNewNoteCommand",
+                "implHandler": [
+                    "    console.log(\"onNewNoteCommand\");\r",
+                    "\r",
+                    "    var now = new Date();\r",
+                    "    var noteId = (now.getTime()).toString() + (this.getRandomInt(0, 100)).toString();\r",
+                    "\r",
+                    "    var newNote = Ext.create(\"NotesApp.model.Note\", {\r",
+                    "        id: noteId,\r",
+                    "        dateCreated: now,\r",
+                    "        title: \"\",\r",
+                    "        narrative: \"\"\r",
+                    "    });\r",
+                    "\r",
+                    "    this.activateNoteEditor(newNote);"
+                ],
+                "name": "newNoteCommand"
+            },
+            "designerId": "2c7328de-6e69-4329-a349-49afc72133ca"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "notesListContainer",
+                "designer|params": [
+                    "container"
+                ],
+                "designer|targetType": "NotesListContainer",
+                "fn": "onEditNoteCommand",
+                "implHandler": [
+                    ""
+                ],
+                "name": "editNoteCommand"
+            },
+            "designerId": "e12c3f09-68c7-4434-a7c8-2beb11d24de3"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "launch",
+                "implHandler": [
+                    "this.callParent(arguments);\r",
+                    "Ext.getStore('localExampleStore').load();\r",
+                    "console.log(\"launch\");\r",
+                    ""
+                ]
+            },
+            "designerId": "aa3bc76c-21c5-4399-8727-c629484854a3"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "noteEditor",
+                "selector": "noteeditor"
+            },
+            "designerId": "c31da6a7-7df7-4072-b783-f6bcdf9411a7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "min",
+                    "max"
+                ],
+                "fn": "getRandomInt",
+                "implHandler": [
+                    "return Math.floor(Math.random() * (max - min + 1)) + min;"
+                ]
+            },
+            "designerId": "3a2f069f-2305-4efc-bec3-6c4562854d38"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "activateNoteEditor",
+                "implHandler": [
+                    "var noteEditor = this.getNoteEditor();\r",
+                    "\r",
+                    "noteEditor.setRecord(record); // load() is deprecated.\r",
+                    "Ext.Viewport.animateActiveItem(noteEditor, { type: 'slide', direction: 'left' });"
+                ]
+            },
+            "designerId": "6af3d98a-2221-4556-a916-37f102b4ec43"
+        }
+    ]
+}
