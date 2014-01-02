@@ -103,8 +103,10 @@
             },
             "codeClass": null,
             "userConfig": {
-                "ref": "noteEditor",
-                "selector": "noteeditor"
+                "autoCreate": true,
+                "ref": "noteEditore",
+                "selector": "noteeditor",
+                "xtype": "noteeditor"
             },
             "designerId": "c31da6a7-7df7-4072-b783-f6bcdf9411a7"
         },
@@ -140,13 +142,32 @@
                 ],
                 "fn": "activateNoteEditor",
                 "implHandler": [
-                    "var noteEditor = this.getNoteEditor();\r",
+                    "var noteEditor = this.getNoteEditore();\r",
                     "\r",
                     "noteEditor.setRecord(record); // load() is deprecated.\r",
-                    "Ext.Viewport.animateActiveItem(noteEditor, { type: 'slide', direction: 'left' });"
+                    "Ext.Viewport.animateActiveItem(noteEditor, this.slideLeftTransition);"
                 ]
             },
             "designerId": "6af3d98a-2221-4556-a916-37f102b4ec43"
+        },
+        {
+            "type": "fixedfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "application"
+                ],
+                "fn": "init",
+                "implHandler": [
+                    "this.slideLeftTransition = { type: 'slide', direction: 'left' };\r",
+                    ""
+                ]
+            },
+            "designerId": "650cc0aa-4b25-425f-b34f-ea87eb6a250d"
         }
     ]
 }
