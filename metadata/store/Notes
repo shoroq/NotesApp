@@ -6,16 +6,12 @@
     },
     "codeClass": null,
     "userConfig": {
-        "data": [
-            "[{ title: \"Note 1\", narrative: \"narrative 1\" },\r",
-            "{ title: \"Note 2\", narrative: \"narrative 2\" },\r",
-            "{ title: \"Note 3\", narrative: \"narrative 3\" },\r",
-            "{ title: \"Note 4\", narrative: \"narrative 4\" },\r",
-            "{ title: \"Note 5\", narrative: \"narrative 5\" },\r",
-            "{ title: \"Note 6\", narrative: \"narrative 6\" }]"
-        ],
+        "data": null,
         "designer|userClassName": "Notes",
         "model": "Note",
+        "requires": [
+            "Ext.data.proxy.LocalStorage"
+        ],
         "storeId": "localExampleStore"
     },
     "designerId": "5b62b53a-26c6-4173-a8be-6d673ff4be3c",
@@ -32,6 +28,18 @@
                 "property": "dateCreated"
             },
             "designerId": "e10f19f0-30c2-49b4-bbfa-55deb0e51155"
+        },
+        {
+            "type": "Ext.data.proxy.LocalStorage",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "notes-app-store"
+            },
+            "designerId": "ca6aa8c4-d694-4b6b-b529-2d1086459b96"
         }
     ]
 }

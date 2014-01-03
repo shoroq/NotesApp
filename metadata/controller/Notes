@@ -66,12 +66,14 @@
             "userConfig": {
                 "designer|controlQuery": "notesListContainer",
                 "designer|params": [
-                    "container"
+                    "list",
+                    "record"
                 ],
                 "designer|targetType": "NotesListContainer",
                 "fn": "onEditNoteCommand",
                 "implHandler": [
-                    ""
+                    "console.log(\"onEditNoteCommand\");\r",
+                    "this.activateNoteEditor(record);"
                 ],
                 "name": "editNoteCommand"
             },
@@ -104,7 +106,7 @@
             "codeClass": null,
             "userConfig": {
                 "autoCreate": true,
-                "ref": "noteEditore",
+                "ref": "noteEditor",
                 "selector": "noteeditor",
                 "xtype": "noteeditor"
             },
@@ -142,7 +144,7 @@
                 ],
                 "fn": "activateNoteEditor",
                 "implHandler": [
-                    "var noteEditor = this.getNoteEditore();\r",
+                    "var noteEditor = this.getNoteEditor();\r",
                     "\r",
                     "noteEditor.setRecord(record); // load() is deprecated.\r",
                     "Ext.Viewport.animateActiveItem(noteEditor, this.slideLeftTransition);"

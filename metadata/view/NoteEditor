@@ -36,7 +36,9 @@
                     "var saveButton = {\r",
                     "    xtype: \"button\",\r",
                     "    ui: \"action\",\r",
-                    "    text: \"Save\"\r",
+                    "    text: \"Save\",\r",
+                    "    handler: this.onSaveButtonTap,\r",
+                    "    scope: this\r",
                     "};\r",
                     "\r",
                     "var topToolbar = {\r",
@@ -88,6 +90,22 @@
                 ]
             },
             "designerId": "7664c9ba-0fd3-4ade-a7a9-61360efb1c14"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onSaveButtonTap",
+                "implHandler": [
+                    "console.log(\"saveNoteCommand\");\r",
+                    "this.fireEvent(\"saveNoteCommand\", this);"
+                ]
+            },
+            "designerId": "6d30b58d-64ad-401b-9049-94b8bb5ac7f5"
         }
     ]
 }

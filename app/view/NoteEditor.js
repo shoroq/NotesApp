@@ -37,7 +37,9 @@ Ext.define('NotesApp.view.NoteEditor', {
         var saveButton = {
             xtype: "button",
             ui: "action",
-            text: "Save"
+            text: "Save",
+            handler: this.onSaveButtonTap,
+            scope: this
         };
 
         var topToolbar = {
@@ -86,6 +88,11 @@ Ext.define('NotesApp.view.NoteEditor', {
             },
             bottomToolbar
         ]);
+    },
+
+    onSaveButtonTap: function() {
+        console.log("saveNoteCommand");
+        this.fireEvent("saveNoteCommand", this);
     }
 
 });

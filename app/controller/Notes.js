@@ -19,7 +19,7 @@ Ext.define('NotesApp.controller.Notes', {
     config: {
         refs: {
             notesListContainer: 'noteslistcontainer',
-            noteEditore: {
+            noteEditor: {
                 autoCreate: true,
                 selector: 'noteeditor',
                 xtype: 'noteeditor'
@@ -50,8 +50,9 @@ Ext.define('NotesApp.controller.Notes', {
             this.activateNoteEditor(newNote);
     },
 
-    onEditNoteCommand: function(container) {
-
+    onEditNoteCommand: function(list, record) {
+        console.log("onEditNoteCommand");
+        this.activateNoteEditor(record);
     },
 
     launch: function() {
@@ -66,7 +67,7 @@ Ext.define('NotesApp.controller.Notes', {
     },
 
     activateNoteEditor: function(record) {
-        var noteEditor = this.getNoteEditore();
+        var noteEditor = this.getNoteEditor();
 
         noteEditor.setRecord(record); // load() is deprecated.
         Ext.Viewport.animateActiveItem(noteEditor, this.slideLeftTransition);

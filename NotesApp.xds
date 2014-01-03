@@ -17,8 +17,8 @@
             "viewportOrientation": "portrait"
         },
         "lastBuildSelection": {
-            "value": "androidSimulate",
-            "display": "Simulate on Android"
+            "value": "webBuild",
+            "display": "Build web app"
         },
         "spacesToIndent": 4,
         "lineEnding": "CRLF",
